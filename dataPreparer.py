@@ -116,12 +116,12 @@ if __name__ == '__main__':
 	depthsDir = "../Dataset/Depths"
 	trainDir = "../Dataset/Train"
 	annotations = ""
+	styleCount = [0] * 16
 	for fileName in os.listdir(photosDir):
 		fileDir = os.path.join(photosDir, fileName)
 		if (os.path.isdir(fileDir)):
 			for styleName in os.listdir(fileDir):
 				styleDir = os.path.join(fileDir, styleName)
-				styleCount = 0
 				if (os.path.isdir(styleDir)):
 					for arcName in os.listdir(styleDir):
 						arcDir = os.path.join(styleDir, arcName)
@@ -130,26 +130,19 @@ if __name__ == '__main__':
 								photoDir = os.path.join(arcDir, photoName)
 								if (os.path.isfile(photoDir)):
 									count += 1
-									styleCount += 1
+									styleCount[styleNames.index(styleName)] += 1
 									if (count % 100 == 0):
 										print("processing (%d)-th image..." % (count))
-									# try:
-									photo = cv2.imread(os.path.join(photosDir, fileName, styleName, arcName, photoName))
-									depth = cv2.imread(os.path.join(depthsDir, fileName, styleName, arcName, photoName))
-									cat = np.concatenate([photo, depth], 1)
-									trainName = styleName + styleCount + ".jpg"
-									cv2.imwrite(os.path.join(trainDir, trainName), cat)
-									annotations += trainName + ", " + styleNames.index(styleName) + "\n"
-									# except:
-									# 	print("Error in %s %s %s" % (styleName, arcName, photoName))
-								if (count == 10):
-									break;
-						if (count == 10):
-							break;
-				if (count == 10):
-					break;
-		if (count == 10):
-			break;
+									try:
+										photo = cv2.imread(os.path.join(photosDir, fileName, styleName, arcName, photoName))
+										depth = cv2.imread(os.path.join(depthsDir, fileName, styleName, arcName, photoName))
+										cat = np.concatenate([photo, depth], 1)
+										trainName = styleName + str(styleCount[styleNames.index(styleName)]) + ".jpg"
+										cv2.imwrite(os.path.join(trainDir, trainName), cat)
+										annotations += trainName + ", " + str(styleNames.index(styleName)) + "\n"
+									except:
+										print("Error in %s %s %s" % (styleName, arcName, photoName))
+
 	annotationFile = open("annotation.csv", "w")
 	n = annotationFile.write(annotations)
 	annotationFile.close()
