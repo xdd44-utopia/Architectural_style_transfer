@@ -1,0 +1,188 @@
+@font-face {
+    font-family: Artifakt;
+    src: url('../font/Artifakt\ Element\ Regular.ttf');
+}
+
+@font-face {
+    font-family: Artifakt;
+    font-weight: bold;
+    src: url('../font/Artifakt\ Element\ Bold.ttf');
+}
+
+@font-face {
+    font-family: Artifakt;
+    font-style: italic;
+    src: url('../font/Artifakt\ Element\ Italic.ttf');
+}
+
+@font-face {
+    font-family: Artifakt;
+    font-weight: bold;
+    font-style: italic;
+    src: url('../font/Artifakt\ Element\ Bold\ Italic.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* Navigation bar */
+
+nav {
+    background: #000000;
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+}
+
+nav * {
+    background-color: #00000000;
+}
+
+nav ul {
+    float: right;
+    margin-left: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 50px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #000000;
+    background: #FFFFFF;
+    transition: .5s;
+}
+
+#logo {
+    display: inline-block;
+    width: 50px;
+    height: 75px;
+    margin-top: 0px;
+    margin-left: 7.5px;
+    margin-right: 0px;
+}
+
+#logo a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+    line-height: 0;
+    font-size: 0;
+}
+
+#logo_show {
+    display: block;
+    background-color: #000000;
+    margin-top: -40px;
+    width: 40px;
+    height: 40px;
+}
+
+#logo_hide {
+    display: block;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#logo_show:hover {
+    opacity: 0;
+    transition: .5s;
+}
+
+
+/*Main*/
+
+#Main {
+    margin-left: 25px;
+    margin-right: 25px;
+    overflow: hidden;
+}
+
+
+/*Footer*/
+
+footer {
+    background: #000000;
+    color: #FFF;
+    width: 100%;
+}
+
+.footer {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 50px;
+}
+
+.footer div {
+    padding-bottom: 25px;
+}
+
+footer div img {
+    display: block;
+    width: 200px;
+}
+
+.contact li {
+    margin-top: 0px;
+}
+
+.contact li a {
+    color: #FFF;
+    transition: color 0.1s;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.contact li a:hover {
+    color: #000;
+}
+
+.contact li img {
+    display: inline-block;
+    margin-bottom: -5px;
+    width: 30px;
+    height: 30px;
+}
+
+footer div h2 a {
+    color: #FFF;
+    transition: color 0.1s;
+}
+
+footer div h2 a:hover {
+    color: #000;
+}
+
+footer hr {
+    border: 1px solid #FFF;
+    margin-bottom: 25px;
+}
+
+.statement {
+    font-size: 5px;
+}
+
+.copyright {
+    font-size: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

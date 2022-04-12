@@ -1,0 +1,137 @@
+.Mylogo {
+    width: 5vw;
+}
+
+.LogoDsc {
+    display: none;
+}
+
+#banner {
+    margin-left: 130px;
+    width: calc(100% - 130px);
+    height: 90vh;
+    overflow: hidden;
+}
+
+#banner>img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+
+/*Main part*/
+
+#Main {
+    overflow: hidden;
+}
+
+#Main h1 {
+    font-size: 75px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#Main h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#Main>p {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#Main p a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+#Main p a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+hr {
+    margin-bottom: 25px;
+}
+
+
+/*containers*/
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 64vw;
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.landscapecontainer {
+    vertical-align: text-top;
+}
+
+.landscapecontainer>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64vw;
+    height: 36vw;
+    overflow-y: hidden;
+    object-fit: contain;
+}
+
+.landscapedsc {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.landscapedsc>p {
+    margin-left: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+}
+
+.landscapedsc>p>i {
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+}
+
+.portraitcontainer {
+    vertical-align: text-top;
+}
+
+.portraitcontainer>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+    overflow-y: hidden;
+    object-fit: cover;
+}
+
+.portraitdsc {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.portraitdsc>p {
+    margin-left: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+}
+
+.portraitdsc>p>i {
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+}

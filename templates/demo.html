@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="xdd44's Portfolio Website">
+    <meta name="keywords" content="Photography, gallery, Architecture, Computer Science">
+    <meta name="author" content="Chenyue &quot;xdd44&quot; DAI">
+    <link rel="stylesheet" type="text/css" href="/static/css/style2.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/demo.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 450px) and (max-device-height: 900px)" href="/static/css/style2_mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/project template.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 450px) and (max-device-height: 900px)" href="/static/css/project template2_mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/aos.css">
+    <link rel="shortcut icon" href="/static/image/icons/Website icon.png">
+    <title>Architectural Style Transfer&nbsp;|&nbsp;xdd44's Collections</title>
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <a href="../index.html">
+                <img id="logo_hide" src="/static/image/Others/Logo/logo_black.png" alt="Logo">
+                <img id="logo_show" src="/static/image/Others/Logo/logo_white.png" alt="Logo">
+            </a>
+        </div>
+        <ul>
+            <li><a>Bio</a></li>
+            <li><a>Photography</a></li>
+            <li><a>Computing</a></li>
+            <li><a>Architecture</a></li>
+            <li><a>Art & Design</a></li>
+            <li><a>Links</a></li>
+        </ul>
+    </nav>
+
+    <div id="banner">
+        <img src="/static/image/Programming/Style/Cover.jpg">
+    </div>
+
+    <div id="Main">
+        <br>
+        <h2>Upload an architecture below!</h2>
+        <form id="inputForm" onsubmit="event.preventDefault(); validateMyForm();">
+            <input type="file" id="inputImage" name="inputImage">
+        </form>
+        <div class="container">
+            <div class="landscapecontainer">
+                <img id="inputPreview" src="/static/image/Programming/StyleDemo/Demo.jpg">
+            </div>
+            <div class="landscapedsc">
+                <p id="styleName">Preview of your architecture</p>
+            </div>
+        </div>
+        <h2>Then select a style below!</h2>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a onclick="transferStyle(0)">Art Deco</a>
+                <a onclick="transferStyle(1)">Art Nouveau</a>
+                <a onclick="transferStyle(2)">Baroque</a>
+                <a onclick="transferStyle(3)">Bauhaus & International</a>
+                <a onclick="transferStyle(4)">Brutalist</a>
+                <a onclick="transferStyle(5)">Byzantine</a>
+                <a onclick="transferStyle(6)">Chicago School</a>
+                <a onclick="transferStyle(7)">Chinese</a>
+                <a onclick="transferStyle(8)">Deconstructivism</a>
+                <a onclick="transferStyle(9)">Gothic</a>
+                <a onclick="transferStyle(10)">Modernism</a>
+                <a onclick="transferStyle(11)">Neoclassical & Beaux-Arts</a>
+                <a onclick="transferStyle(12)">Palladian</a>
+                <a onclick="transferStyle(13)">Postmodernism</a>
+                <a onclick="transferStyle(14)">Romanesque</a>
+                <a onclick="transferStyle(15)">Russian Revival</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="landscapecontainer">
+                <img id="resultPreview" src="/static/image/Programming/StyleDemo/DemoResult.jpg">
+            </div>
+            <div class="landscapedsc">
+                <p id="styleDsc">Style has been transferred onto your architecture!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer" id="Links">
+            <div><img src="/static/image/logo 3.1.png" alt="xdd44"></div>
+            <hr>
+            <div>
+                <h2>Contact & Connect</h2>
+                <ul class="contact">
+                    <li>
+                        <img src="/static/image/icons/email.png"><a href="mailto: xdd44.utopia@gmail.com" target="_blank">xdd44.utopia@gmail.com</a>
+                    </li>
+                    <li>
+                        <img src="/static/image/icons/linkedin.png"><a href="https://www.linkedin.com/in/cyleodai" target="_blank">Chenyue DAI</a>
+                    </li>
+                    <li>
+                        <img src="/static/image/icons/github.png"><a href="https://github.com/xdd44-utopia" target="_blank">xdd44-utopia</a>
+                    </li>
+                    <li>
+                        <img src="/static/image/icons/instagram.png"><a href="https://www.instagram.com/xdd44.utopia" target="_blank">xdd44.utopia</a>
+                    </li>
+                    <li>
+                        <img src="/static/image/icons/youtube.png"><a href="https://www.youtube.com/channel/UCuLjsKUCwts0mB72BVh3ZJg" target="_blank">xdd 44</a>
+                    </li>
+                    <li>
+                        <img src="/static/image/icons/bilibili.png"><a href="https://space.bilibili.com/22729170" target="_blank">xdd44_</a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <h2><a href="https://github.com/xdd44-utopia/Portfolio">See this website on GitHub</a></h2>
+            </div>
+            <hr>
+            <div class="statement">All materials contained on this website, unless noted otherwise, are works of Chenyue &quot;xdd44&quot; DAI protected by Copyright law of Hong Kong and may not be reproduced, distributed, transmitted, displayed, published or broadcast without
+                the prior written permission of Chenyue &quot;xdd44&quot; DAI.<br><br>Please email me at xdd44.utopia@gmail.com for any request of use permission and other enquiries.<br><br></div>
+            <div class="copyright">Copyright © 2022 Chenyue &quot;xdd44&quot; DAI &nbsp;&nbsp;All Rights Reserved</div>
+        </div>
+    </footer>
+    <script src="/static/js/demo.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</body>
+
+</html>

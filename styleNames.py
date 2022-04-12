@@ -1,4 +1,4 @@
-styleNames = ["Romanesque", "Gothic", "Baroque", "Neoclassical & Beaux-Arts", "Art Nouveau", "Art Deco", "Bauhaus & International", "Modernism", "Postmodernism", "Deconstructivism", "Russian Revival", "Chicago School", "Byzantine", "Brutalist", "Chinese", "Palladian"]
+styleNames = ["Art Deco", "Art Nouveau", "Baroque", "Bauhaus & International", "Brutalist", "Byzantine", "Chicago School", "Chinese", "Deconstructivism", "Gothic", "Modernism", "Neoclassical & Beaux-Arts", "Palladian", "Postmodernism", "Romanesque", "Russian Revival"]
 styleArcs = {
 	"Romanesque" : [
 		"Pisa Cathedral",
